@@ -1,0 +1,134 @@
+/* === Setări generale === */
+body {
+    background-color: rgb(252, 218, 218);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === Header === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+/* === Logo cu animație simplă === */
+.logo h1 {
+    margin: 0;
+    color: #6b5b3f;
+    animation: urca 1s ease-in-out;
+}
+
+/* === Meniu de navigare === */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #6b5b3f;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #e7c6a4;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: apare 1.5s ease-in forwards;
+}
+
+.nav-menu a:hover {
+    background-color: #c49b73;
+}
+
+/* === Main === */
+main {
+    flex: 1;
+    padding: 40px 10%;
+    background-color: #f8f4ef;
+    text-align: center;
+}
+
+/* === Footer === */
+footer {
+    background-color: #b89f91;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* === Stiluri pentru paginile principale === */
+.acasa-main h2,
+.despre-main h2,
+.meniu-main h2,
+.contact-main h2 {
+    font-size: 2.3em;
+    color: #6b5b3f;
+    margin-bottom: 20px;
+    animation: apare 2s ease-in forwards;
+    opacity: 0;
+}
+
+.acasa-main p,
+.despre-main p,
+.meniu-main p,
+.contact-main p {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+    animation: apare 2s ease-in forwards;
+    opacity: 0;
+}
+
+/* === Galerie de imagini === */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.image-gallery img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: apare 1.5s ease-in forwards;
+    opacity: 0;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* === Animații simple === */
+@keyframes urca {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apare {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
